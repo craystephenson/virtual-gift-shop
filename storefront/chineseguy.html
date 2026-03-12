@@ -2,25 +2,25 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Chinese Guy Buys Pipe On Honchie! - Honchie</title>
-  <link rel="stylesheet" href="../css/shop.css">
   <script>
-    (function(){if(localStorage.getItem('honchie-theme')!=='classic'){var l=document.querySelector('link[href*="shop.css"]');var h=l?l.href.replace('shop.css','shop-modern.css'):'../css/shop-modern.css';var s=document.createElement('link');s.rel='stylesheet';s.href=h;s.id='theme-modern-css';document.head.appendChild(s);document.documentElement.classList.add('theme-modern');}})();
+    (function(){var c=localStorage.getItem('honchie-theme')==='classic';var segs=location.pathname.split('/').filter(Boolean);var d=Math.max(0,segs.length-1);var b=(d?'../'.repeat(d):'')+'css/';var s=document.createElement('link');s.rel='stylesheet';s.href=b+(c?'shop.css':'shop-modern.css');s.id='honchie-main-css';document.head.appendChild(s);if(!c)document.documentElement.classList.add('theme-modern');})();
   </script>
 </head>
 <body bgcolor="#FFFFFF">
 
 <table border="0" width="101%">
   <tr>
-    <td><a href="../index.html"><img border="0" src="../images/storefront/honchie.gif" alt="Honchie"></a></td>
+    <td><a href="../index.html"><img border="0" src="../images/storefront/honchie.gif" alt="Honchie" id="honchie-logo"></a><script>(function(){if(localStorage.getItem('honchie-theme')!=='classic'){var i=document.getElementById('honchie-logo');if(i)i.src=i.src.replace(/honchie\.gif$/,'honchie-modern.png');}})();</script></td>
   </tr>
   <tr>
     <td>
       <nav class="honchie-nav">
-        <a href="../categories/home_office.html">Home and Office</a>
+        <a href="../categories/home_office.html">Home &amp; Office</a>
         <a href="../categories/entertainment.html">Entertainment</a>
-        <a href="../categories/food_drink.html">Food and Drink</a>
-        <a href="../categories/health_beauty.html">Health and Beauty</a>
+        <a href="../categories/food_drink.html">Food &amp; Drink</a>
+        <a href="../categories/health_beauty.html">Wellness</a>
         <a href="../categories/apparel.html">Apparel</a>
         <a href="../categories/services.html">Services</a>
         <a href="../band.html">The Band Honchie</a>

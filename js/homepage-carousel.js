@@ -19,7 +19,7 @@
     if (s.indexOf('http') === 0) return s;
     var fname = s.split('/').pop();
     fname = THUMB_TO_FULL[fname] || fname;
-    return 'images/full-modern/' + fname;
+    return 'images/full/' + fname;
   }
 
   function getFallbackPath(product) {
@@ -38,7 +38,7 @@
   function init() {
     var carousel = document.getElementById('homepage-carousel');
     if (!carousel) return;
-    var isModern = document.body.classList.contains('theme-modern');
+    var isModern = document.documentElement.classList.contains('theme-modern') || document.body.classList.contains('theme-modern');
     if (!isModern) {
       clearInterval(timer);
       timer = null;

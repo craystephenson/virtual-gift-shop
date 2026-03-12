@@ -5,7 +5,7 @@
     ['entertainment', /\bentertainment\b/i],          // Entertainment, Home Entertainment
     ['home_office', /\bhome\b|\boffice\b/i],          // Home, Home & Office (excludes Home Entertainment)
     ['food_drink', /\bfood\b|\bdrink\b/i],
-    ['health_beauty', /\bhealth\b|\bbeauty\b/i],
+    ['health_beauty', /\bhealth\b|\bbeauty\b|\bwellness\b/i],
     ['apparel', /\bapparel\b/i],
     ['services', /\bservices\b/i],
     ['music', /\bmusic\b/i]
@@ -90,6 +90,11 @@
     return '$' + (isNaN(n) ? '0.00' : n.toFixed(2));
   }
 
+  function truncate(str, len) {
+    if (!str || str.length <= len) return str || '';
+    return str.slice(0, len).trim() + '…';
+  }
+
   function renderProduct(product) {
     const base = getBasePath();
     const imgVal = product.thumbnails || product.image;
@@ -97,6 +102,7 @@
     // In Modern theme, fall back to full classic (not thumb) when full-modern fails
     const fallback = isSellOutTheme() ? (getImageFallback(imgVal, true) || getImageFallback(imgVal, false) || base + 'images/storefront/placeholder.gif') : base + 'images/storefront/placeholder.gif';
     const productHref = base + 'product.html?id=' + product.id;
+    const desc = truncate(product.description || '', 80);
     return `
       <div class="product-card">
         <a href="${productHref}" class="product-link">
@@ -105,7 +111,7 @@
           </div>
           <div class="product-info">
             <h3 class="product-name">${product.name}</h3>
-            <p class="product-description">${product.description || ''}</p>
+            ${desc ? '<p class="product-description">' + desc + '</p>' : ''}
             <p class="product-price">${formatPrice(product.price)}</p>
             <span class="product-cta">View details</span>
           </div>

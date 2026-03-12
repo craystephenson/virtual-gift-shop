@@ -2,27 +2,27 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Health &amp; Beauty - Honchie Virtual Gift Shop</title>
-  <link rel="stylesheet" href="../css/shop.css">
   <script>
-    (function(){if(localStorage.getItem('honchie-theme')!=='classic'){var l=document.querySelector('link[href*="shop.css"]');var h=l?l.href.replace('shop.css','shop-modern.css'):'../css/shop-modern.css';var s=document.createElement('link');s.rel='stylesheet';s.href=h;s.id='theme-modern-css';document.head.appendChild(s);document.documentElement.classList.add('theme-modern');}})();
+    (function(){var c=localStorage.getItem('honchie-theme')==='classic';var segs=location.pathname.split('/').filter(Boolean);var d=Math.max(0,segs.length-1);var b=(d?'../'.repeat(d):'')+'css/';var s=document.createElement('link');s.rel='stylesheet';s.href=b+(c?'shop.css':'shop-modern.css');s.id='honchie-main-css';document.head.appendChild(s);if(!c)document.documentElement.classList.add('theme-modern');})();
   </script>
 </head>
 <body bgcolor="#FFFFFF" data-category="health_beauty">
 
 <table border="0" width="101%">
   <tr>
-    <td width="100%"><a href="../index.html"><img border="0" src="../images/storefront/honchie.gif" alt="Honchie"></a></td>
+    <td width="100%"><a href="../index.html"><img border="0" src="../images/storefront/honchie.gif" alt="Honchie" id="honchie-logo"></a><script>(function(){if(localStorage.getItem('honchie-theme')!=='classic'){var i=document.getElementById('honchie-logo');if(i)i.src=i.src.replace(/honchie\.gif$/,'honchie-modern.png');}})();</script></td>
   </tr>
 </table>
 <table border="0" width="79%">
   <tr>
     <td width="100%">
       <nav class="honchie-nav">
-        <a href="home_office.html">Home and Office</a>
+        <a href="home_office.html">Home &amp; Office</a>
         <a href="entertainment.html">Entertainment</a>
-        <a href="food_drink.html">Food and Drink</a>
-        <a href="health_beauty.html" class="active">Health and Beauty</a>
+        <a href="food_drink.html">Food &amp; Drink</a>
+        <a href="health_beauty.html" class="active">Wellness</a>
         <a href="apparel.html">Apparel</a>
         <a href="services.html">Services</a>
         <a href="../band.html">The Band Honchie</a>
@@ -38,8 +38,8 @@
 </form>
 
 <div class="category-header">
-  <h1>Health &amp; Beauty</h1>
-  <p>Browse our health and beauty products.</p>
+  <h1>Wellness</h1>
+  <p>Browse our wellness products.</p>
 </div>
 
 <div id="product-grid" class="product-grid"></div>

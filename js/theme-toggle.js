@@ -1,35 +1,47 @@
 (function() {
   const STORAGE_KEY = 'honchie-theme';
 
-  function getModernCssPath() {
-    const base = document.querySelector('link[href*="shop.css"]');
-    if (base && base.href) {
-      return base.href.replace('shop.css', 'shop-modern.css');
-    }
-    return 'css/shop-modern.css';
+  var TAGLINES = [
+    'A gift shop for the smallest of intellects',
+    'A gift shop for monkeys and midgets',
+    'A gift shop where it\'s always 1998',
+    'A gift shop for the intellectually inferior',
+    'A gift shop for peope like Foss and Jeff',
+    'A gift shop for discriminating tastes',
+    'A gift shop where your knee hurt',
+    'A gift shop for the remarkably un-PC'
+  ];
+
+  function randomTagline() {
+    return TAGLINES[Math.floor(Math.random() * TAGLINES.length)];
   }
 
-  function loadModernCss() {
-    if (document.getElementById('theme-modern-css')) return;
-    const link = document.createElement('link');
-    link.rel = 'stylesheet';
-    link.href = getModernCssPath();
-    link.id = 'theme-modern-css';
-    document.head.appendChild(link);
+  function getCssBase() {
+    var segs = location.pathname.split('/').filter(Boolean);
+    var d = Math.max(0, segs.length - 1);
+    return (d ? '../'.repeat(d) : '') + 'css/';
+  }
+
+  function swapStylesheet(modern) {
+    var link = document.getElementById('honchie-main-css');
+    if (link) {
+      link.href = getCssBase() + (modern ? 'shop-modern.css' : 'shop.css');
+    }
   }
 
   function isModern() {
-    return document.body.classList.contains('theme-modern');
+    return document.documentElement.classList.contains('theme-modern');
   }
 
   function setTheme(modern) {
     if (modern) {
-      document.body.classList.add('theme-modern');
+      document.documentElement.classList.add('theme-modern');
       localStorage.setItem(STORAGE_KEY, 'modern');
     } else {
-      document.body.classList.remove('theme-modern');
+      document.documentElement.classList.remove('theme-modern');
       localStorage.setItem(STORAGE_KEY, 'classic');
     }
+    swapStylesheet(modern);
     updateButton();
     updateLogos(modern);
     updateTagline(modern);
@@ -54,7 +66,7 @@
     if (!logoLink || !logoLink.parentNode) return;
     var tagline = document.createElement('span');
     tagline.className = 'honchie-tagline';
-    tagline.textContent = 'A gift shop for discriminating tastes';
+    tagline.textContent = randomTagline();
     logoLink.parentNode.appendChild(tagline);
   }
 
@@ -67,7 +79,6 @@
 
   function createButton() {
     if (document.getElementById('theme-toggle-btn')) return;
-    loadModernCss();
     const btn = document.createElement('button');
     btn.id = 'theme-toggle-btn';
     btn.className = 'theme-toggle';
@@ -88,8 +99,7 @@
   function init() {
     var modern = localStorage.getItem(STORAGE_KEY) !== 'classic';
     if (modern) {
-      loadModernCss();
-      document.body.classList.add('theme-modern');
+      document.documentElement.classList.add('theme-modern');
     }
     createButton();
     updateLogos(modern);
