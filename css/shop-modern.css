@@ -59,7 +59,7 @@
   box-shadow: none;
 }
 
-/* Nav - Amazon secondary bar style, centered */
+/* Nav - Amazon secondary bar style, justified */
 .theme-modern .honchie-nav {
   font-size: 14px;
   font-weight: 500;
@@ -69,7 +69,7 @@
   text-align: center;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
   gap: 1.2em;
 }
 

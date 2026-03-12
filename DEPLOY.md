@@ -2,23 +2,21 @@
 
 ## Step 1: Create the GitHub repo (one-time)
 
+Your `gh` token can't create repos. Create it in the browser instead:
+
 1. Go to **https://github.com/new**
-2. Repository name: `virtual-gift-shop` (or any name you prefer)
+2. Repository name: `virtual-gift-shop`
 3. Choose **Public**
 4. **Do NOT** add a README, .gitignore, or license (we already have these)
 5. Click **Create repository**
 
 ## Step 2: Push to GitHub
 
-Run these commands (replace `YOUR_USERNAME` with your GitHub username if different from `craystephenson`):
+The remote is already set. Run:
 
 ```bash
-git remote add origin https://github.com/craystephenson/virtual-gift-shop.git
-git branch -M main
 git push -u origin main
 ```
-
-If the repo name or username is different, adjust the URL accordingly.
 
 ## Step 3: Deploy to Cloudflare Pages (Direct Upload — no GitHub OAuth)
 

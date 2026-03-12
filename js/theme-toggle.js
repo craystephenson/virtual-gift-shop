@@ -54,7 +54,7 @@
     if (!logoLink || !logoLink.parentNode) return;
     var tagline = document.createElement('span');
     tagline.className = 'honchie-tagline';
-    tagline.innerHTML = '<em>Random music</em> A gift shop for discriminating tastes';
+    tagline.textContent = 'A gift shop for discriminating tastes';
     logoLink.parentNode.appendChild(tagline);
   }
 

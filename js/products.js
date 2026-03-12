@@ -46,7 +46,8 @@
     'imonkey.jpg': 'imonk.jpg',
     'fecal.jpg': 'fecalmist.jpg',
     'thumb3.jpg': '3.jpg',
-    'condom2th.jpg': 'condom2.jpg'
+    'condom2th.jpg': 'condom2.jpg',
+    'thumbmrt.jpg': 'mrt.jpg'
   };
 
   function getImageUrl(val, useFull) {
