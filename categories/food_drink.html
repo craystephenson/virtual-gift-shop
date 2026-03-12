@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <title>Food &amp; Drink - Honchie Virtual Gift Shop</title>
   <link rel="stylesheet" href="../css/shop.css">
+  <script>
+    (function(){if(localStorage.getItem('honchie-theme')!=='classic'){var l=document.querySelector('link[href*="shop.css"]');var h=l?l.href.replace('shop.css','shop-modern.css'):'../css/shop-modern.css';var s=document.createElement('link');s.rel='stylesheet';s.href=h;s.id='theme-modern-css';document.head.appendChild(s);document.documentElement.classList.add('theme-modern');}})();
+  </script>
 </head>
 <body bgcolor="#FFFFFF" data-category="food_drink">
 
@@ -36,7 +39,7 @@
 
 <div class="category-header">
   <h1>Food &amp; Drink</h1>
-  <p>Food and drink, jackass.</p>
+  <p>Browse our food and drink selection.</p>
 </div>
 
 <div id="product-grid" class="product-grid"></div>

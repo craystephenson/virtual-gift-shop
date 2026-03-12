@@ -37,7 +37,7 @@
   }
 
   function isSellOutTheme() {
-    return typeof localStorage !== 'undefined' && localStorage.getItem('honchie-theme') === 'modern';
+    return typeof localStorage !== 'undefined' && localStorage.getItem('honchie-theme') !== 'classic';
   }
 
   // Thumb and full use different filenames for some products - map thumb name to full name

@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <title>Product - Honchie Virtual Gift Shop</title>
   <link rel="stylesheet" href="css/shop.css">
+  <script>
+    (function(){if(localStorage.getItem('honchie-theme')!=='classic'){var l=document.querySelector('link[href*="shop.css"]');var h=l?l.href.replace('shop.css','shop-modern.css'):'css/shop-modern.css';var s=document.createElement('link');s.rel='stylesheet';s.href=h;s.id='theme-modern-css';document.head.appendChild(s);document.documentElement.classList.add('theme-modern');}})();
+  </script>
   <style>
     .product-detail { max-width: 900px; margin: 0 auto; padding: 24px 16px; display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
     .product-detail-image { background: #f8f8f8; padding: 24px; text-align: center; }
