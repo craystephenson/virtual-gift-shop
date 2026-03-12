@@ -1,0 +1,30 @@
+Reimagine this image as a modern, professionally photographed product advertisement.
+Keep the exact same product concept, name, and visual idea, but transform it into a high-end contemporary product photo.
+The product should look real, well-designed, and commercially produced, not like a crude Photoshop collage.
+Maintain the original joke and concept, but redesign the packaging and composition so it looks like a modern retail product from today.
+Style:
+• professional studio product photography
+• modern packaging design
+• clean typography
+• realistic lighting and shadows
+• sharp focus
+• premium materials and printing
+• subtle reflections and depth
+Composition:
+• SQUARE FORMAT (1:1) - product centered and composed to fill the square frame
+• No portrait or landscape orientation; the image must be square
+• centered product hero shot filling the square
+• Must be in color
+• minimal studio background (white, gradient, or soft color)
+• advertising-quality lighting
+• cinematic product styling
+Important:
+Do not change the product idea, characters, or humor.
+Only upgrade the design, realism, lighting, and photography to look like a modern commercial product launch.
+
+PRODUCT CONTEXT:
+Name: Fun Ed Learn From Mahir! Class
+
+Description: Honchie has teamed up with the academic giants at Fun Ed to bring an exciting new course in self-improvement -- Learn From Mahir! Hosted by world-renowned lover of life, music, and sex, Mahir will show you how to succeed in a wide range of areas. Like the best way to nude photo take, play many enstrumaans, and so much more. This class is free for Honchie fans everywhere, but is available by invitation only. To register, tell us how you think a day with Mahir could improve your life.
+
+[CRITICAL: Generate as square image, 800x800 pixels. Product must fill the square frame - no portrait/landscape composition.]

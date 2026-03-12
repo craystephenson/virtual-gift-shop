@@ -1,0 +1,30 @@
+Reimagine this image as a modern, professionally photographed product advertisement.
+Keep the exact same product concept, name, and visual idea, but transform it into a high-end contemporary product photo.
+The product should look real, well-designed, and commercially produced, not like a crude Photoshop collage.
+Maintain the original joke and concept, but redesign the packaging and composition so it looks like a modern retail product from today.
+Style:
+• professional studio product photography
+• modern packaging design
+• clean typography
+• realistic lighting and shadows
+• sharp focus
+• premium materials and printing
+• subtle reflections and depth
+Composition:
+• SQUARE FORMAT (1:1) - product centered and composed to fill the square frame
+• No portrait or landscape orientation; the image must be square
+• centered product hero shot filling the square
+• Must be in color
+• minimal studio background (white, gradient, or soft color)
+• advertising-quality lighting
+• cinematic product styling
+Important:
+Do not change the product idea, characters, or humor.
+Only upgrade the design, realism, lighting, and photography to look like a modern commercial product launch.
+
+PRODUCT CONTEXT:
+Name: The Stick
+
+Description: Stuck behind a desk all day? Don’t have time to enjoy the great outdoors? Then it’s high-time you ordered The Stick®, from Jumbly Park. Made out of 100% pure wood, The Stick® is a must have for anyone who enjoys nature, but doesn't have the time or patience to spend outdoors. Available in both full-bloom or leafless, The Stick™ is a great way to bring the great outdoors indoors to your office or cubicle.
+
+[CRITICAL: Generate as square image, 800x800 pixels. Product must fill the square frame - no portrait/landscape composition.]

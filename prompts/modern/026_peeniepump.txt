@@ -1,0 +1,30 @@
+Reimagine this image as a modern, professionally photographed product advertisement.
+Keep the exact same product concept, name, and visual idea, but transform it into a high-end contemporary product photo.
+The product should look real, well-designed, and commercially produced, not like a crude Photoshop collage.
+Maintain the original joke and concept, but redesign the packaging and composition so it looks like a modern retail product from today.
+Style:
+• professional studio product photography
+• modern packaging design
+• clean typography
+• realistic lighting and shadows
+• sharp focus
+• premium materials and printing
+• subtle reflections and depth
+Composition:
+• SQUARE FORMAT (1:1) - product centered and composed to fill the square frame
+• No portrait or landscape orientation; the image must be square
+• centered product hero shot filling the square
+• Must be in color
+• minimal studio background (white, gradient, or soft color)
+• advertising-quality lighting
+• cinematic product styling
+Important:
+Do not change the product idea, characters, or humor.
+Only upgrade the design, realism, lighting, and photography to look like a modern commercial product launch.
+
+PRODUCT CONTEXT:
+Name: The Peenie Pump
+
+Description: Forget those awkward, clunky suction pumps or painful injections. The PeeniePump 500® is guaranteed to get you from limp to pimp in under 10 seconds. The ZEFAL Double Shot system is the most efficient way to inflate: just 10 strokes to inflate an average man to 145 PSI in 9.4 seconds! So saddle up and get yourself some, cowboy! Recommended pressure is 137.2 psi, but you can pump until you pop. (Air-tight pressure plug not pictured, available for $3.97)
+
+[CRITICAL: Generate as square image, 800x800 pixels. Product must fill the square frame - no portrait/landscape composition.]

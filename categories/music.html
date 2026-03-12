@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Music - Honchie Virtual Gift Shop</title>
+  <link rel="stylesheet" href="../css/shop.css">
+</head>
+<body bgcolor="#FFFFFF" data-category="music">
+
+<table border="0" width="101%">
+  <tr>
+    <td width="100%"><a href="../index.html"><img border="0" src="../images/storefront/honchie.gif" alt="Honchie"></a></td>
+  </tr>
+</table>
+<table border="0" width="79%">
+  <tr>
+    <td width="100%">
+      <nav class="honchie-nav">
+        <a href="home_office.html">Home and Office</a>
+        <a href="entertainment.html">Entertainment</a>
+        <a href="food_drink.html">Food and Drink</a>
+        <a href="health_beauty.html">Health and Beauty</a>
+        <a href="apparel.html">Apparel</a>
+        <a href="services.html">Services</a>
+        <a href="../band.html">The Band Honchie</a>
+        <a href="questions.html">Questions?</a>
+        <a href="../board/board.html">Forum</a>
+      </nav>
+    </td>
+  </tr>
+</table>
+
+<form style="text-align: center; padding: 16px 0;" name="FrontPage_Form1" action="../search.html" method="GET">
+  <input NAME="q" size="20" placeholder="Search for a product"> <input TYPE="submit" value="Let's Shop!">
+</form>
+
+<div class="category-header">
+  <h1>Music</h1>
+  <p>Music, jackass.</p>
+</div>
+
+<div id="product-grid" class="product-grid"></div>
+
+<script src="../data/products-data.js"></script>
+<script src="../js/products.js"></script>
+<script>HonchieProducts.load('product-grid');</script>
+<script src="../js/theme-toggle.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Product - Honchie Virtual Gift Shop</title>
+  <link rel="stylesheet" href="css/shop.css">
+  <style>
+    .product-detail { max-width: 900px; margin: 0 auto; padding: 24px 16px; display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+    .product-detail-image { background: #f8f8f8; padding: 24px; text-align: center; }
+    .product-detail-image img { max-width: 100%; max-height: 400px; object-fit: contain; }
+    .product-detail-info h1 { font-size: 24px; margin: 0 0 16px; }
+    .product-detail-info .price { font-size: 28px; font-weight: 700; color: #b12704; margin: 0 0 16px; }
+    .product-detail-info .description { font-size: 15px; line-height: 1.7; color: #333; margin: 0 0 24px; max-width: 100%; }
+    .product-detail-info .no-desc { font-size: 13px; color: #888; background: #f5f5f5; padding: 16px; border-radius: 4px; }
+    .back-link { display: inline-block; margin-top: 24px; color: #007185; text-decoration: none; }
+    .back-link:hover { text-decoration: underline; }
+    @media (max-width: 600px) { .product-detail { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body bgcolor="#FFFFFF">
+
+<table border="0" width="101%">
+  <tr>
+    <td width="100%"><a href="index.html"><img border="0" src="images/storefront/honchie.gif" alt="Honchie"></a></td>
+  </tr>
+</table>
+<table border="0" width="79%">
+  <tr>
+    <td width="100%">
+      <nav class="honchie-nav">
+        <a href="categories/home_office.html">Home and Office</a>
+        <a href="categories/entertainment.html">Entertainment</a>
+        <a href="categories/food_drink.html">Food and Drink</a>
+        <a href="categories/health_beauty.html">Health and Beauty</a>
+        <a href="categories/apparel.html">Apparel</a>
+        <a href="categories/services.html">Services</a>
+        <a href="band.html">The Band Honchie</a>
+        <a href="categories/questions.html">Questions?</a>
+        <a href="board/board.html">Forum</a>
+      </nav>
+    </td>
+  </tr>
+</table>
+
+<div id="product-detail"></div>
+
+<script src="data/products-data.js"></script>
+<script src="js/products.js"></script>
+<script>
+(function() {
+  function escapeHtml(s) {
+    if (!s) return '';
+    const div = document.createElement('div');
+    div.textContent = s;
+    return div.innerHTML;
+  }
+  function formatDescription(s) {
+    return escapeHtml(s || '').replace(/\n/g, '<br>');
+  }
+  const params = new URLSearchParams(window.location.search);
+  const id = parseInt(params.get('id'), 10);
+  const products = (window.PRODUCTS_DATA || {}).products || [];
+  const product = products.find(p => p.id === id);
+  const container = document.getElementById('product-detail');
+  if (!product) {
+    container.innerHTML = '<div style="padding:48px;text-align:center;"><p>Product not found.</p><a href="javascript:history.back()" class="back-link">&larr; Back</a></div>';
+    return;
+  }
+  function getImageUrl(val) {
+    if (window.HonchieProducts && window.HonchieProducts.getImageUrl) return window.HonchieProducts.getImageUrl(val, true) || '';
+    var s = String(val || '').replace(/^#+|#+$/g, '').trim();
+    if (s.startsWith('http://') || s.startsWith('https://')) return s;
+    if (s.startsWith('images/')) return s;
+    return 'images/full/' + s;
+  }
+  function getImageFallback(val) {
+    if (window.HonchieProducts && window.HonchieProducts.getImageFallback) return window.HonchieProducts.getImageFallback(val, true);
+    return 'images/storefront/placeholder.gif';
+  }
+  function formatPrice(price) {
+    if (price == null || price === '') return '$0.00';
+    var n = Number(price);
+    return '$' + (isNaN(n) ? '0.00' : n.toFixed(2));
+  }
+  // Prefer full image over thumb for detail page
+  const imgVal = product.image || product.thumbnails || '';
+  const imgPath = getImageUrl(imgVal);
+  const imgFallback = getImageFallback(imgVal);
+  const desc = product.description ? formatDescription(product.description) : '<p class="no-desc">Run <code>python3 scripts/export_db_to_json.py</code> to pull product descriptions from the database. (Requires: brew install mdbtools)</p>';
+  container.innerHTML = '<div class="product-detail">' +
+    '<div class="product-detail-image"><img src="' + escapeHtml(imgPath) + '" alt="' + escapeHtml(product.name) + '" data-fallback="' + escapeHtml(imgFallback) + '" onerror="if(this.dataset.fallback)this.src=this.dataset.fallback"></div>' +
+    '<div class="product-detail-info">' +
+    '<h1>' + escapeHtml(product.name) + '</h1>' +
+    '<p class="price">' + formatPrice(product.price) + '</p>' +
+    '<div class="description">' + desc + '</div>' +
+    '<a href="javascript:history.back()" class="back-link">&larr; Back</a>' +
+    '</div></div>';
+})();
+</script>
+
+<script src="js/theme-toggle.js"></script>
+</body>
+</html>

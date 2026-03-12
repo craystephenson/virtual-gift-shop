@@ -1,0 +1,23 @@
+P { color: black; font-size: 12pt }
+H1 { color: black; font-weight: bold; font-size: 36pt }
+H2 { color: black; font-weight: bold; font-size: 24pt }
+H3 { color: black; font-weight: bold; font-size: 18pt }
+H4 { color: black; font-weight: bold; font-size: 15pt }
+H5 { color: black; font-weight: bold; font-size: 12pt }
+H6 { color: black; font-weight: bold; font-size: 10pt }
+ADDRESS { color: black; font-style: italic; font-size: 15pt }
+PRE { color: black; font-size: 12pt }
+DFN { color: black; font-style: italic; font-size: 12pt }
+CITE { color: black; font-style: italic; font-size: 12pt }
+CODE { color: black; font-size: 10pt }
+EM { color: black; font-style: italic; font-size: 12pt }
+HV { color: black; font-size: 12pt }
+KBD { color: black; font-weight: bold; font-size: 10pt }
+SAMP { color: black; font-size: 10pt }
+STRONG { color: black; font-weight: bold; font-size: 12pt }
+VAR { color: black; font-size: 10pt }
+A:link { color: #0000FF }
+A:visited { color: #FF00FF }
+A:hover { color: #00FFFF }
+A:active { color: #FF0000 }
+BODY { background: #FFFFFF  }

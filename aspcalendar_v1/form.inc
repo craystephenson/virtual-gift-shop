@@ -1,0 +1,33 @@
+<P>
+<FONT FACE="Verdana, Arial" SIZE=2>
+<FORM ACTION="<% =sScript%>" METHOD=GET>
+<SELECT NAME=MONTH>
+<OPTION VALUE=1 SELECTED>Jan
+<OPTION VALUE=2>Feb
+<OPTION VALUE=3>Mar
+<OPTION VALUE=4>Apr
+<OPTION VALUE=5>May
+<OPTION VALUE=6>Jun
+<OPTION VALUE=7>Jul
+<OPTION VALUE=8>Aug
+<OPTION VALUE=9>Sep
+<OPTION VALUE=10>Oct
+<OPTION VALUE=11>Nov
+<OPTION VALUE=12>Dec
+</SELECT>
+<SELECT NAME=YEAR>
+<OPTION VALUE=1998 SELECTED>1998
+<OPTION VALUE=1999>1999
+<OPTION VALUE=2000>2000
+<OPTION VALUE=2001>2001
+<OPTION VALUE=2002>2002
+</SELECT>
+</FONT>
+<P><INPUT TYPE="Image" NAME="" SRC="images/go.gif" BORDER="0" WIDTH="35" HEIGHT="20"></P>
+</FORM>
+
+<FONT FACE="Verdana, Helvetica" SIZE=2><B><A HREF="admin.asp" TARGET="_top">Admin</A></B></FONT>
+<P><FONT FACE="Verdana, Arial" SIZE=1>
+Best viewed with 4.0 version browsers.
+</FONT></P>
+<P><FONT FACE="Verdana, Helvetica" SIZE=2><B><A HREF="mailto:calendar@kamath.com">Feedbacks please</A></B></FONT></P>

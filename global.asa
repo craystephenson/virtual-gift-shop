@@ -1,0 +1,245 @@
+<SCRIPT LANGUAGE=VBScript RUNAT=Server>
+Sub Application_OnStart
+	'==FrontPage Generated - startspan==
+	Dim FrontPage_UrlVars(17)
+	'--Project Data Connection
+		Application("inventory_ConnectionString") = "DRIVER={Microsoft Access Driver (*.mdb)};DBQ=URL=databases/inventory.mdb;ReadOnly=0;UID=Admin"
+		FrontPage_UrlVars(0) = "inventory_ConnectionString"
+		Application("inventory_ConnectionTimeout") = 15
+		Application("inventory_CommandTimeout") = 30
+		Application("inventory_CursorLocation") = 3
+		Application("inventory_RuntimeUserName") = "Admin"
+		Application("inventory_RuntimePassword") = ""
+	'--Project Data Connection
+		Application("orders_ConnectionString") = "DRIVER={Microsoft Access Driver (*.mdb)};DBQ=URL=databases/orders.mdb;ReadOnly=0;UID=Admin"
+		FrontPage_UrlVars(1) = "orders_ConnectionString"
+		Application("orders_ConnectionTimeout") = 15
+		Application("orders_CommandTimeout") = 30
+		Application("orders_CursorLocation") = 3
+		Application("orders_RuntimeUserName") = "Admin"
+		Application("orders_RuntimePassword") = ""
+	'--Project Data Connection
+		Application("postal_ConnectionString") = "DRIVER={Microsoft Access Driver (*.mdb)};DBQ=URL=databases/postal.mdb"
+		FrontPage_UrlVars(2) = "postal_ConnectionString"
+		Application("postal_ConnectionTimeout") = 15
+		Application("postal_CommandTimeout") = 30
+		Application("postal_CursorLocation") = 3
+		Application("postal_RuntimeUserName") = ""
+		Application("postal_RuntimePassword") = ""
+	'--Project Data Connection
+		Application("music_ConnectionString") = "DRIVER={Microsoft Access Driver (*.mdb)};DBQ=URL=databases/music.mdb"
+		FrontPage_UrlVars(3) = "music_ConnectionString"
+		Application("music_ConnectionTimeout") = 15
+		Application("music_CommandTimeout") = 30
+		Application("music_CursorLocation") = 3
+		Application("music_RuntimeUserName") = ""
+		Application("music_RuntimePassword") = ""
+	'--Project Data Connection
+		Application("calendar_ConnectionString") = "DRIVER={Microsoft Access Driver (*.mdb)};DBQ=URL=databases/calendar.mdb"
+		FrontPage_UrlVars(4) = "calendar_ConnectionString"
+		Application("calendar_ConnectionTimeout") = 15
+		Application("calendar_CommandTimeout") = 30
+		Application("calendar_CursorLocation") = 3
+		Application("calendar_RuntimeUserName") = ""
+		Application("calendar_RuntimePassword") = ""
+	'--Project Data Connection
+		Application("board_ConnectionString") = "DRIVER={Microsoft Access Driver (*.mdb)};DBQ=URL=databases/ASPDISC.MDB"
+		FrontPage_UrlVars(5) = "board_ConnectionString"
+		Application("board_ConnectionTimeout") = 15
+		Application("board_CommandTimeout") = 30
+		Application("board_CursorLocation") = 3
+		Application("board_RuntimeUserName") = ""
+		Application("board_RuntimePassword") = ""
+	'--Project Data Connection
+		Application("delete_calendar_ConnectionString") = "DRIVER={Microsoft Access Driver (*.mdb)};DBQ=URL=fpdb/delete_calendar.mdb"
+		FrontPage_UrlVars(6) = "delete_calendar_ConnectionString"
+		Application("delete_calendar_ConnectionTimeout") = 15
+		Application("delete_calendar_CommandTimeout") = 30
+		Application("delete_calendar_CursorLocation") = 3
+		Application("delete_calendar_RuntimeUserName") = ""
+		Application("delete_calendar_RuntimePassword") = ""
+	'--Project Data Connection
+		Application("mail_ConnectionString") = "DRIVER={Microsoft Access Driver (*.mdb)};DBQ=URL=databases/mailing_list.mdb"
+		FrontPage_UrlVars(7) = "mail_ConnectionString"
+		Application("mail_ConnectionTimeout") = 15
+		Application("mail_CommandTimeout") = 30
+		Application("mail_CursorLocation") = 3
+		Application("mail_RuntimeUserName") = ""
+		Application("mail_RuntimePassword") = ""
+	'--Project Data Connection
+		Application("photos_ConnectionString") = "DRIVER={Microsoft Access Driver (*.mdb)};DBQ=URL=databases/photos.mdb"
+		FrontPage_UrlVars(8) = "photos_ConnectionString"
+		Application("photos_ConnectionTimeout") = 15
+		Application("photos_CommandTimeout") = 30
+		Application("photos_CursorLocation") = 3
+		Application("photos_RuntimeUserName") = ""
+		Application("photos_RuntimePassword") = ""
+	'--Project Data Connection
+		Application("bank_ConnectionString") = "DRIVER={Microsoft Access Driver (*.mdb)};DBQ=URL=databases/bank.mdb"
+		FrontPage_UrlVars(9) = "bank_ConnectionString"
+		Application("bank_ConnectionTimeout") = 15
+		Application("bank_CommandTimeout") = 30
+		Application("bank_CursorLocation") = 3
+		Application("bank_RuntimeUserName") = ""
+		Application("bank_RuntimePassword") = ""
+	'--Project Data Connection
+		Application("livemp3s_ConnectionString") = "DRIVER={Microsoft Access Driver (*.mdb)};DBQ=URL=databases/live_mp3s.mdb"
+		FrontPage_UrlVars(10) = "livemp3s_ConnectionString"
+		Application("livemp3s_ConnectionTimeout") = 15
+		Application("livemp3s_CommandTimeout") = 30
+		Application("livemp3s_CursorLocation") = 3
+		Application("livemp3s_RuntimeUserName") = ""
+		Application("livemp3s_RuntimePassword") = ""
+	'--Project Data Connection
+		Application("mp3demos_ConnectionString") = "DRIVER={Microsoft Access Driver (*.mdb)};DBQ=URL=databases/demo_mp3s.mdb"
+		FrontPage_UrlVars(11) = "mp3demos_ConnectionString"
+		Application("mp3demos_ConnectionTimeout") = 15
+		Application("mp3demos_CommandTimeout") = 30
+		Application("mp3demos_CursorLocation") = 3
+		Application("mp3demos_RuntimeUserName") = ""
+		Application("mp3demos_RuntimePassword") = ""
+	'--Project Data Connection
+		Application("concerts_ConnectionString") = "DRIVER={Microsoft Access Driver (*.mdb)};DBQ=URL=databases/concerts.mdb"
+		FrontPage_UrlVars(12) = "concerts_ConnectionString"
+		Application("concerts_ConnectionTimeout") = 15
+		Application("concerts_CommandTimeout") = 30
+		Application("concerts_CursorLocation") = 3
+		Application("concerts_RuntimeUserName") = ""
+		Application("concerts_RuntimePassword") = ""
+	'--Project Data Connection
+		Application("Database1_ConnectionString") = "DRIVER={Microsoft Access Driver (*.mdb)};DBQ=URL=fpdb/guestbook.mdb"
+		FrontPage_UrlVars(13) = "Database1_ConnectionString"
+		Application("Database1_ConnectionTimeout") = 15
+		Application("Database1_CommandTimeout") = 30
+		Application("Database1_CursorLocation") = 3
+		Application("Database1_RuntimeUserName") = ""
+		Application("Database1_RuntimePassword") = ""
+	'--Project Data Connection
+		Application("name_ConnectionString") = "DRIVER={Microsoft Access Driver (*.mdb)};DBQ=URL=contact/name.mdb"
+		FrontPage_UrlVars(14) = "name_ConnectionString"
+		Application("name_ConnectionTimeout") = 15
+		Application("name_CommandTimeout") = 30
+		Application("name_CursorLocation") = 3
+		Application("name_RuntimeUserName") = ""
+		Application("name_RuntimePassword") = ""
+	'--Project Data Connection
+		Application("new_page_1_ConnectionString") = "DRIVER={Microsoft Access Driver (*.mdb)};DBQ=URL=fpdb/new_page_12.mdb"
+		FrontPage_UrlVars(15) = "new_page_1_ConnectionString"
+		Application("new_page_1_ConnectionTimeout") = 15
+		Application("new_page_1_CommandTimeout") = 30
+		Application("new_page_1_CursorLocation") = 3
+		Application("new_page_1_RuntimeUserName") = ""
+		Application("new_page_1_RuntimePassword") = ""
+	'--Project Data Connection
+		Application("albumname_ConnectionString") = "DRIVER={Microsoft Access Driver (*.mdb)};DBQ=URL=album_name/album_name.mdb"
+		FrontPage_UrlVars(16) = "albumname_ConnectionString"
+		Application("albumname_ConnectionTimeout") = 15
+		Application("albumname_CommandTimeout") = 30
+		Application("albumname_CursorLocation") = 3
+		Application("albumname_RuntimeUserName") = ""
+		Application("albumname_RuntimePassword") = ""
+	'--
+	Application("FrontPage_UrlVars") = FrontPage_UrlVars
+	'==FrontPage Generated - endspan==
+End Sub
+Sub Session_OnStart
+	FrontPage_StartSession '==FrontPage Generated==
+End Sub
+Sub FrontPage_StartSession
+	On Error Resume Next
+	if Len(Application("FrontPage_VRoot")) > 0 then Exit Sub
+	' discover the VRoot for the current page;
+	' walk back up VPath until we find global.asa
+	Vroot = Request.ServerVariables("PATH_INFO")
+	strG1 = "global.asa"
+	strG2 = "Global.asa"
+	iCount = 0
+	do while Len(Vroot) > 1
+		idx = InStrRev(Vroot, "/")
+		if idx > 0 then
+			Vroot = Left(Vroot,idx)
+		else
+			' error; assume root web
+			Vroot = "/"
+		end if
+		if FrontPage_FileExists(Server.MapPath(Vroot & strG1)) then exit do
+		if FrontPage_FileExists(Server.MapPath(Vroot & strG2)) then exit do
+		if Right(Vroot,1) = "/" then Vroot = Left(Vroot,Len(Vroot)-1)
+		iCount = iCount + 1
+		if iCount > 100 then
+			' error; assume root web
+			Vroot = "/"
+			exit do
+		end if
+	loop
+	' map all URL= attributes in _ConnectionString variables
+	Application.Lock
+	if Len(Application("FrontPage_VRoot")) = 0 then
+		Application("FrontPage_VRoot") = Vroot
+		UrlVarArray = Application("FrontPage_UrlVars")
+		for i = 0 to UBound(UrlVarArray)
+			if Len(UrlVarArray(i)) > 0 then FrontPage_MapUrl(UrlVarArray(i))
+		next
+	end if
+	Application.Unlock
+End Sub
+Sub FrontPage_MapUrl(AppVarName)
+	' convert URL attribute in conn string to absolute file location
+	strVal = Application(AppVarName)
+	strKey = "URL="
+	idxStart = InStr(strVal, strKey)
+	If idxStart = 0 Then Exit Sub
+	strBefore = Left(strVal, idxStart - 1)
+	idxStart = idxStart + Len(strKey)
+	idxEnd = InStr(idxStart, strVal, ";")
+	If idxEnd = 0 Then
+		strAfter = ""
+		strURL = Mid(strVal, idxStart)
+	Else
+		strAfter = ";" & Mid(strVal, idxEnd + 1)
+		strURL = Mid(strVal, idxStart, idxEnd - idxStart)
+	End If
+	strOut = strBefore & Server.MapPath(Application("FrontPage_VRoot") & strURL) & strAfter
+	Application(AppVarName) = strOut
+End Sub
+Function FrontPage_FileExists(fspath)
+	On Error Resume Next
+	FrontPage_FileExists = False
+	set fs = CreateObject("Scripting.FileSystemObject")
+	Err.Clear
+	set istream = fs.OpenTextFile(fspath)
+	if Err.Number = 0 then
+		FrontPage_FileExists = True
+		istream.Close
+	end if
+	set istream = Nothing
+	set fs = Nothing
+End Function
+</SCRIPT>
+
+<SCRIPT LANGUAGE=VBScript RUNAT=Server>
+Sub Application_OnStart
+	Application("EventDB_ConnectionString") = "DSN=events;DBQ=j:\WebRoot\events.mdb;DriverId=25;FIL=MS Access;MaxBufferSize=512;PageTimeout=5;"
+	Application("EventDB_ConnectionTimeout") = 15
+	Application("EventDB_CommandTimeout") = 30
+	Application("EventDB_RuntimeUserName") = ""
+	Application("EventDB_RuntimePassword") = ""
+	
+	' use the next line if you have set up a DSN
+	' Application("EventDB_ConnectionString") = "DSN=events;DBQ=" & Server.MapPath("/EventCalender/EventDB.mdb") & ";DriverId=25;FIL=MS Access;MaxBufferSize=512;PageTimeout=5;"
+	
+	' use the following line if you don't set up a DSN ("dsn-less connection")
+	Application("EventDB_ConnectionString") = "Driver={Microsoft Access Driver (*.mdb)};DBQ=" & _
+			Server.MapPath("/EventCalender/EventDB.mdb") & ";DriverId=25;FIL=MS Access;MaxBufferSize=512;PageTimeout=5;"
+			
+	' if you want another font, simply change it here
+	Application("FontFaceName") = "Verdana"
+End Sub
+
+Sub Session_OnStart
+	' nobody should use this object any more; set to nothing for checking purposes
+	Set Session("DBConn") = Nothing
+End Sub
+</SCRIPT>
+
+

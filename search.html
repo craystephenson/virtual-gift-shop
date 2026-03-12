@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Search - Honchie Virtual Gift Shop</title>
+  <link rel="stylesheet" href="css/shop.css">
+</head>
+<body bgcolor="#FFFFFF">
+
+<table border="0" width="101%">
+  <tr>
+    <td width="100%"><a href="index.html"><img border="0" src="images/storefront/honchie.gif" alt="Honchie"></a></td>
+  </tr>
+</table>
+<table border="0" width="79%">
+  <tr>
+    <td width="100%">
+      <nav class="honchie-nav">
+        <a href="categories/home_office.html">Home and Office</a>
+        <a href="categories/entertainment.html">Entertainment</a>
+        <a href="categories/food_drink.html">Food and Drink</a>
+        <a href="categories/health_beauty.html">Health and Beauty</a>
+        <a href="categories/apparel.html">Apparel</a>
+        <a href="categories/services.html">Services</a>
+        <a href="band.html">The Band Honchie</a>
+        <a href="categories/questions.html">Questions?</a>
+        <a href="board/board.html">Forum</a>
+      </nav>
+    </td>
+  </tr>
+</table>
+
+<form style="text-align: center; padding: 16px 0;" name="FrontPage_Form1" action="search.html" method="GET">
+  <input NAME="q" size="20" placeholder="Search for a product" id="search-input"> <input TYPE="submit" value="Let's Shop!" style="font-family: Arial">
+</form>
+
+<div class="category-header">
+  <h1>Search Results</h1>
+  <p id="search-summary"></p>
+</div>
+
+<div id="product-grid" class="product-grid"></div>
+
+<script src="data/products-data.js"></script>
+<script src="js/products.js"></script>
+<script>
+(function() {
+  const params = new URLSearchParams(window.location.search);
+  const query = (params.get('q') || '').trim();
+  const container = document.getElementById('product-grid');
+  const summary = document.getElementById('search-summary');
+  const input = document.getElementById('search-input');
+
+  if (input) input.value = query;
+
+  if (!query || query.length < 2) {
+    summary.textContent = 'Enter at least 2 characters to search for a product.';
+    container.innerHTML = '<p class="no-products">Try searching for a product name (e.g. "Donko", "Bear", "Penis Kleen").</p>';
+    return;
+  }
+
+  const products = (window.PRODUCTS_DATA || {}).products || [];
+  const q = query.toLowerCase();
+  const matches = products.filter(p => (p.name || '').toLowerCase().includes(q));
+
+  if (matches.length === 1) {
+    window.location.replace('product.html?id=' + matches[0].id);
+    return;
+  }
+
+  if (matches.length === 0) {
+    summary.textContent = 'No results found for "' + query + '".';
+    container.innerHTML = '<p class="no-products">No products match your search. <a href="index.html">Try again</a>.</p>';
+    return;
+  }
+
+  summary.textContent = matches.length + ' result(s) for "' + query + '".';
+  function getImageUrl(val) {
+    if (window.HonchieProducts && window.HonchieProducts.getImageUrl) return window.HonchieProducts.getImageUrl(val, false) || 'images/storefront/placeholder.gif';
+    if (!val) return 'images/storefront/placeholder.gif';
+    var s = String(val).replace(/^#+|#+$/g, '').trim();
+    if (s.startsWith('http://') || s.startsWith('https://')) return s;
+    if (s.startsWith('images/')) return s;
+    return 'images/full/' + s;
+  }
+  function getImageFallback(val) {
+    if (window.HonchieProducts && window.HonchieProducts.getImageFallback) return window.HonchieProducts.getImageFallback(val, false) || 'images/storefront/placeholder.gif';
+    return 'images/storefront/placeholder.gif';
+  }
+  function formatPrice(price) {
+    if (price == null || price === '') return '$0.00';
+    var n = Number(price);
+    return '$' + (isNaN(n) ? '0.00' : n.toFixed(2));
+  }
+  container.innerHTML = matches.map(p => {
+    const imgPath = getImageUrl(p.thumbnails || p.image);
+    const fallback = getImageFallback(p.thumbnails || p.image);
+    return '<div class="product-card"><a href="product.html?id=' + p.id + '" class="product-link">' +
+      '<div class="product-image"><img src="' + imgPath + '" alt="' + p.name + '" data-fallback="' + fallback + '" onerror="if(this.dataset.fallback)this.src=this.dataset.fallback"></div>' +
+      '<div class="product-info"><h3 class="product-name">' + p.name + '</h3>' +
+      '<p class="product-price">' + formatPrice(p.price) + '</p>' +
+      '<span class="product-cta">View full details</span></div></a></div>';
+  }).join('');
+})();
+</script>
+
+<script src="js/theme-toggle.js"></script>
+</body>
+</html>

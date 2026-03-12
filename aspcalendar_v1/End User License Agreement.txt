@@ -1,0 +1,49 @@
+End User License Agreement
+
+This End-User License Agreement ("EULA") is a legal agreement between you and Manohar Kamath for 
+ASP Calendar software version 1 (“SOFTWARE PRODUCT”). This EULA grants you, an individual, a personal, 
+nonexclusive license to make and use copies of the software portion of the SOFTWARE PRODUCT in the 
+manner provided below. If you are an entity, Manohar Kamath grants you the right to designate one 
+individual within your organization to have the sole rights to use the SOFTWARE PRODUCT in the 
+manner provided below.
+
+Manohar Kamath gives you the following nonexclusive, royalty-free rights:
+* To use the SOFTWARE PRODUCT in its original form or in any modified form thereof.
+* You may not resell the SOFTWARE PRODUCT in its entirety or any part thereof.
+* You may not include the SOFTWARE PRODUCT in its entirety or any part thereof as a 
+part of any service rendered for a fee (consulting, etc.)
+
+COPYRIGHT
+All title and copyrights in and to the SOFTWARE PRODUCT (including but not limited to any images, 
+photographs, and animations, incorporated into the SOFTWARE PRODUCT), any accompanying printed 
+materials, and any copies of the SOFTWARE PRODUCT are owned by Manohar Kamath. The SOFTWARE PRODUCT 
+is protected by copyright laws and international treaty provisions. Therefore, you must treat the 
+SOFTWARE PRODUCT like any other copyrighted material except that you may either (a) make one 
+copy of the SOFTWARE PRODUCT solely for backup or archival purposes, or (b) install the 
+SOFTWARE PRODUCT on a single computer provided you keep the original solely for backup or 
+archival purposes. You may not copy the printed materials accompanying the SOFTWARE PRODUCT.
+
+DISCLAIMER OF WARRANTY
+NO WARRANTIES. This SOFTWARE PRODUCT is provided "AS IS" without warranty of any kind. To the maximum 
+extent permitted by applicable law, Manohar Kamath disclaims all warranties, either express or implied, 
+including, but not limited to, implied warranties of merchantability and fitness for a particular purpose 
+and any warranty against infringement, with regard to the SOFTWARE PRODUCT. This limited warranty gives you 
+specific legal rights. You may have others, with vary from state/jurisdiction to state/jurisdiction.
+
+CUSTOMER REMEDIES. Manohar Kamath's entire liability and your exclusive remedy shall not exceed the price
+paid for the SOFTWARE PRODUCT.
+
+LIMITATION OF LIABILITY. To the maximum extent permitted by applicable law, in no event shall 
+Manohar Kamath be liable for any special, incidental, indirect, or consequential damages whatsoever 
+(including, without limitation, damages for loss of business profits, business interruption, loss of 
+business information, or any other pecuniary loss) arising out of the use or inability to the use the 
+SOFTWARE PRODUCT or the failure to provide support services, event if Manohar Kamath has been advised of 
+the possibility of such damages. In any case, Manohar Kamath's entire liability under any provision of this 
+EULA shall be limited to the greater of the amount actually paid by you for the SOFTWARE PRODUCT or U.S.$5.00.
+
+NO SUPPORT SERVICE. You shall bear the entire responsibility to support the SOFTWARE PRODUCT, be it maintenance, 
+bug fix or any other type of service that is required to make the SOFTWARE PRODUCT operational.
+
+TERMINATION
+Without prejudice to any other rights, Manohar Kamath may terminate this EULA if you fail to comply with the terms 
+and conditions of this EULA. In such event, you must destroy all copies of the SOFTWARE PRODUCT and all of its component parts.
