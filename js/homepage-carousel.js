@@ -19,7 +19,7 @@
     if (s.indexOf('http') === 0) return s;
     var fname = s.split('/').pop();
     fname = THUMB_TO_FULL[fname] || fname;
-    return 'images/full/' + fname;
+    return 'images/full-modern/' + fname;
   }
 
   function getFallbackPath(product) {
@@ -90,10 +90,15 @@
     resetTimer();
   }
 
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', init);
-  } else {
+  function runInit() {
     init();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', runInit);
+    window.addEventListener('load', runInit);
+  } else {
+    runInit();
   }
 
   document.addEventListener('themeChanged', function() { init(); });
